@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Gallery</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <h2>My Image Gallery</h2>
+
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all', this)">Show All</button>
+        <button class="btn" onclick="filterSelection('landscapes', this)">Landscapes</button>
+        <button class="btn" onclick="filterSelection('portraits', this)">Portraits</button>
+        <button class="btn" onclick="filterSelection('architecture', this)">Architecture</button>
+    </div>
+
+    <div class="container">
+
+        <!-- Landscapes -->
+        <div class="filterDiv landscapes">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcG1ZUFsihUd5WdIMVDrnF24P4iXBO95ODRadBBUPfOQ&s=10" alt="Beach">
+                <div class="card-info">
+                    <h3>Beach</h3>
+                    <span class="tag">Landscapes</span>
+                    <div class="overlay">
+                        <p>A beautiful beach with clear blue water and golden sand.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="filterDiv architecture">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIinTsGcFd2iujX4EVwO8xC8dTOgYBNj2dNLe8jYIWiw&s=10" alt="skyscraper">
+                <div class="card-info">
+                    <h3>Skyscraper</h3>
+                    <span class="tag">Architecture</span>
+                    <div class="overlay">
+                        <p>A modern skyscraper displaying impressive city architecture, sitting at almost 65 floors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portraits -->
+        <div class="filterDiv portraits">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF3e3mKrn9Z4RsY2tINnR8IAxRrqXva5TKcSJZH3AQiA&s=10" alt="Abraham Lincoln">
+                <div class="card-info">
+                    <h3>Abraham Lincoln</h3>
+                    <span class="tag">Portraits</span>
+                    <div class="overlay">
+                        <p>Abraham Lincoln (February 12, 1809 – April 15, 1865) was the 16th president of the United States.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Landscapes -->
+        <div class="filterDiv landscapes">
+            <div class="card">
+                <img src="https://media.sciencephoto.com/image/f0189323/800wm" alt="farm field"> 
+                <div class="card-info">
+                    <h3>Field</h3>
+                    <span class="tag">Landscapes</span>
+                    <div class="overlay">
+                        <p>A calm farm plot showcasing harvesting time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portraits -->
+        <div class="filterDiv portraits">
+            <div class="card">
+                <img src="https://www.nelsonmandela.org/uploads/files/_600xAUTO_crop_center-center_none/youn.jpg" alt="Nelson Mandela">
+                <div class="card-info">
+                    <h3>Nelson Mandela</h3>
+                    <span class="tag">Portraits</span>
+                    <div class="overlay">
+                        <p>A portrait photograph capturing Nelson Mandela in his youth.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture (Fixed from portraits) -->
+        <div class="filterDiv architecture">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKK-6IbhoG0wYpkuSDTHQK1PddpUsFEDBS0ZiG9Y3kMQ&s=10" alt="Colosseum">
+                <div class="card-info">
+                    <h3>Colosseum</h3>
+                    <span class="tag">Architecture</span>
+                    <div class="overlay">
+                        <p>The largest ancient amphitheater ever built, located in the center of Rome.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portraits -->
+        <div class="filterDiv portraits">
+            <div class="card">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/John-milton.jpg/500px-John-milton.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="John Milton">
+                <div class="card-info">
+                    <h3>John Milton</h3>
+                    <span class="tag">Portraits</span>
+                    <div class="overlay">
+                        <p>John Milton (9 December 1608 – 8 November 1674) was an English poet, polemicist, and civil servant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Landscapes (Fixed from landscape) -->
+        <div class="filterDiv landscapes">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3-4-2vdNQE2zzxzydt4fILshs7hWYYMPYIFDFMQnR54mzBSVei2AHbDc&s=10" alt="sea flat">
+                <div class="card-info">
+                    <h3>Salar de Uyuni</h3>
+                    <span class="tag">Landscapes</span>
+                    <div class="overlay">
+                        <p>Salar de Uyuni is the largest salt flat in the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="filterDiv architecture">
+            <div class="card">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ef/SF_maig_2_cropped.jpg/500px-SF_maig_2_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="temple">
+                <div class="card-info">
+                    <h3>Sagrada Familia</h3>
+                    <span class="tag">Architecture</span>
+                    <div class="overlay">
+                        <p>A massive, unfinished Roman Catholic minor basilica located in Barcelona, Spain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portraits (Fixed from portrait and typo in name) -->
+        <div class="filterDiv portraits">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGGNwfFnZguT_mvlrQotnjkkZbSirp-AcqJ69jYEISe-zoWgrDWsDmQ1TtSyHcVy2JctTBsf30it9ozezc_-AtIy887SzCdJt8srm7d2o4&s=10" alt="painting">
+                <div class="card-info">
+                    <h3>Mona Lisa</h3>
+                    <span class="tag">Portraits</span>
+                    <div class="overlay">
+                        <p>One of Leonardo da Vinci's most famous paintings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Architecture -->
+        <div class="filterDiv architecture">
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9rfQ_eWvn78tkMwK-OH93O8jZhE92WCF-XRr3sPwKkg&s=10" alt="building">
+                <div class="card-info">
+                    <h3>Leaning Tower of Pisa</h3>
+                    <span class="tag">Architecture</span>
+                    <div class="overlay">
+                        <p>The freestanding bell tower of the Pisa Cathedral in Pisa, Italy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Landscapes -->
+        <div class="filterDiv landscapes">
+            <div class="card">
+                <img src="https://live.staticflickr.com/305/31251656194_d1489d5bec_b.jpg" alt="tundra in siberia">
+                <div class="card-info">
+                    <h3>Tundra</h3>
+                    <span class="tag">Landscapes</span>
+                    <div class="overlay">
+                        <p>A cold, treeless biome characterized by harsh winters and permanently frozen subsoil.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function filterSelection(category, button) {
+            let cards = document.getElementsByClassName("filterDiv");
+            let buttons = document.getElementsByClassName("btn");
+
+            // Filter gallery images using the 'hide' class
+            for (let i = 0; i < cards.length; i++) {
+                if (category === "all" || cards[i].classList.contains(category)) {
+                    cards[i].classList.remove("hide");
+                } else {
+                    cards[i].classList.add("hide");
+                }
+            }
+
+            // Update active button state
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("active");
+            }
+            button.classList.add("active");
+        }
+    </script>
+</body>
+</html>
